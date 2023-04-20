@@ -1,0 +1,134 @@
+<?php
+// Start the session
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #F8F8F8;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #000;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #003366;
+            color: #fff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }
+
+        label, input {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #003366;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0059b3;
+        }
+
+        .success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Banking System</h1>
+    </header>
+
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="customers.php">View all Customers</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to the Banking System</h2>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Banking System</p>
+    </footer>
+</body>
+</html>

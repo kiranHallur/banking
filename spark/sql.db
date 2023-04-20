@@ -1,0 +1,29 @@
+CREATE TABLE customers (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  current_balance DECIMAL(10, 2) NOT NULL DEFAULT 0.00
+);
+
+CREATE TABLE transfers (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  sender_id INT(11) NOT NULL,
+  receiver_id INT(11) NOT NULL,
+  amount DECIMAL(10, 2) NOT NULL,
+  date_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (sender_id) REFERENCES customers(id),
+  FOREIGN KEY (receiver_id) REFERENCES customers(id)
+);
+
+
+INSERT INTO customers (name, email, current_balance) VALUES
+  ('John Doe', 'john.doe@example.com', 5000.00),
+  ('Jane Doe', 'jane.doe@example.com', 10000.00),
+  ('Bob Smith', 'bob.smith@example.com', 2500.00),
+  ('Alice Johnson', 'alice.johnson@example.com', 7500.00),
+  ('David Lee', 'david.lee@example.com', 3000.00),
+  ('Susan Brown', 'susan.brown@example.com', 15000.00),
+  ('Mike Davis', 'mike.davis@example.com', 8000.00),
+  ('Lisa Taylor', 'lisa.taylor@example.com', 12000.00),
+  ('Sarah Wilson', 'sarah.wilson@example.com', 9000.00),
+  ('Tom Jackson', 'tom.jackson@example.com', 6000.00);
